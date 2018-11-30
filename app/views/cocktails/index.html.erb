@@ -5,7 +5,7 @@
     <% image_url = "https://source.unsplash.com/featured/800x400/?cocktail,#{cocktail.name}" %>
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail text-center">
-        <img src= <%= image_url%> style="background-size = cover" alt="Cocktail">
+        <img src= <%= image_url%> alt="Cocktail">
         <div class="caption">
           <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
           <p><%= link_to "Discover", cocktail_path(cocktail), class: 'btn btn-primary'%></p>

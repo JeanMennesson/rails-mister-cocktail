@@ -1,3 +1,28 @@
 body {
   background-color: white;
 }
+
+.wrapper-image-new {
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.wrapper-image-show {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
