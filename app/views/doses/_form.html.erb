@@ -8,8 +8,8 @@
       </ul>
     </div>
   <% end %>
-  <%= f.input :description %>
-  <%= f.association :cocktail %>
+<!--   <%= f.association :cocktail %>
+ -->  <%= f.input :description, placeholder: 'Specify what you need to add: cl, leaves, part ...' %>
   <%= f.association :ingredient %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

@@ -14,29 +14,17 @@
   background-color: white;
 }
 
-.navbar-wagon-center {
+.navbar-wagon-title {
+
   h1 {
     color: #E9686A;
     font-size : 30px;
     margin: 0px;
   }
-}
-
-.navbar-wagon-button {
-  color: white;
-  background-color: rgb(233, 104, 106);
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.8;
-}
-
-.navbar-wagon-button:hover {
-  color: rgb(11, 26, 38);
-  opacity: 1;
-  text-decoration: none;
-  transition: 0.5s ease;
+  &-transparent {
+    opacity: 0;
+    transition: opacity ease 0.5s;
+  }
 }
 
 /* Logo */

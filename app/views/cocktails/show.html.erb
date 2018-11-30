@@ -1,17 +1,20 @@
-<div class="wrapper-image-show", style ="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%="https://source.unsplash.com/featured/?cocktail,#{@cocktail.name}"%>");">
+<div class="wrapper-image-show", style ="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%="https://source.unsplash.com/featured/?cocktail,#{@cocktail.name.delete(" ")}"%>);">
   <h1><%= @cocktail.name %></h1>
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <ul>
-        <p>Doses : <%@cocktail.doses.each do |dose|%></p>
-          <li style="list-style: none"> <%= dose.description %> of <%= dose.ingredient.name %> <%= link_to raw('<i class="far fa-trash-alt"></i>'), dose_path(dose),
+    <div class="col-12-xs col-sm-7 dose">
+      <ul class="list-unstyled">
+        <h3>Ingredients : <%@cocktail.doses.each do |dose|%></h3>
+          <li><strong><%= dose.description %></strong> - <%= dose.ingredient.name %> <%= link_to raw('<i class="far fa-trash-alt"></i>'), dose_path(dose),
               method: :delete,
               data: { confirm: "Are you sure?" } %>
           </li>
         <% end %>
       </ul>
+    </div>
+    <div class="col-12-xs col-sm-5 dose">
+      <h3>Description :</h3>
     </div>
   </div>
 </div>
@@ -29,7 +32,7 @@
   </div>
   <div class="row">
     <div class="text-center">
-      <div class="col-sm-12">
+      <div class="col-sm-12 ">
         <%= link_to cocktails_path, class: 'btn btn-primary btn-lg clearfix' do %>
           <p>
             <i class="fas fa-list-ul"></i>
