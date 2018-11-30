@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class = "text-center">Add your new favourite cocktail</h1>
+  <%= render 'form', cocktail: @cocktail %>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="text-center">
+      <%= link_to cocktails_path, class: 'btn btn-primary btn-lg clearfix' do %>
+        <p>
+          <i class="fas fa-undo-alt"></i>
+          Back to the cocktails
+        </p>
+      <% end %>
+     <hr>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 class="text-center"><%= @cocktail.name %></h1>
+    <% image_url = "https://source.unsplash.com/featured/?cocktail,#{@cocktail.name}"%>
+    <img src="<%=image_url%>" alt="Cocktail image" style = "background-size: cover, height: 20vh">
+  <hr>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <ul>
+        <p>Doses : <%@cocktail.doses.each do |dose|%></p>
+          <li style="list-style: none"> <%= dose.description %> of <%= dose.ingredient.name %> <%= link_to raw('<i class="far fa-trash-alt"></i>'), dose_path(dose),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6" >
+      <%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-primary btn-lg clearfix' do %>
+        <p>
+          <i class="fas fa-plus"></i>
+          Add a dose
+        </p>
+      <% end %>
+     <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-center">
+      <div class="col-sm-12">
+        <%= link_to cocktails_path, class: 'btn btn-primary btn-lg clearfix' do %>
+          <p>
+            <i class="fas fa-list-ul"></i>
+            See all the cocktails
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
